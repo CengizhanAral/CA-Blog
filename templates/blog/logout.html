@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Çıkış Yapıldı" %}{% endblock %}
+{% block content %}
+    <h2>{% trans "Başarıyla çıkış yaptınız." %}</h2>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            <a href="{% url 'login' %}">{% trans "Tekrar Giriş Yap" %}</a>
+        </small>
+    </div>
+{% endblock content %}

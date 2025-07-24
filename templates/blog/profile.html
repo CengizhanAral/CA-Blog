@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block title %}{% trans "Profilim" %}{% endblock %}
+{% block content %}
+    <div class="card shadow-sm">
+        <div class="card-body p-4">
+            <h2 class="card-title">{{ user.username }}</h2>
+            {% if messages %}{% for message in messages %}<div class="alert alert-success">{{ message }}</div>{% endfor %}{% endif %}
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">{% trans "Kullanıcı Bilgileri" %}</legend>
+                    {{ u_form|crispy }}
+                </fieldset>
+                <fieldset class="form-group mt-4">
+                    <legend class="border-bottom mb-4">{% trans "Profil Bilgileri" %}</legend>
+                    {{ p_form|crispy }}
+                </fieldset>
+                <div class="form-group mt-4">
+                    <button class="btn btn-primary" type="submit">{% trans "Güncelle" %}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

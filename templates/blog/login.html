@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block title %}{% trans "Giriş Yap" %}{% endblock %}
+{% block content %}
+    <div class="card shadow-sm">
+        <div class="card-body p-4">
+            <h2 class="card-title text-center mb-4">{% trans "Giriş Yap" %}</h2>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="d-grid mt-4">
+                    <button class="btn btn-primary btn-lg" type="submit">{% trans "Giriş Yap" %}</button>
+                </div>
+            </form>
+            <div class="border-top pt-3 mt-3 text-center">
+                <small class="text-muted">
+                    {% trans "Hesabın yok mu?" %} <a class="ms-2" href="{% url 'register' %}">{% trans "Hemen Kayıt Ol" %}</a>
+                </small>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

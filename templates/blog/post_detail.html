@@ -1,0 +1,70 @@
+{% extends "blog/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ display_title }}{% endblock %}
+
+{% block content %}
+<article class="card mb-4 shadow-sm">
+    <div class="card-body">
+        <header class="mb-4">
+            <h1 class="fw-bolder mb-1">{{ display_title }}</h1>
+            <div class="text-muted fst-italic mb-2">
+                {% trans "Yayınlanma tarihi:" %} {{ post.created_at|date:"d F Y" }} |
+                {% trans "Yazar:" %} <a href="{% url 'blog:author_posts' post.author.user.username %}">{{ post.author.user.get_full_name|default:post.author.user.username }}</a> |
+                <i class="fas fa-eye"></i> {{ post.views }} |
+                <i class="far fa-clock"></i> {% blocktrans with minutes=post.get_reading_time %}{{ minutes }} dk okuma{% endblocktrans %}
+            </div>
+            {% if post.category %}
+                <a class="badge bg-secondary text-decoration-none link-light" href="{{ post.category.get_absolute_url }}">{{ post.category.name }}</a>
+            {% endif %}
+        </header>
+        <section class="mb-5 post-content">
+            {{ display_content|safe }}
+        </section>
+        <footer class="d-flex align-items-center justify-content-end">
+            <strong class="me-3">{% trans "Paylaş:" %}</strong>
+            <a href="https://x.com/intent/post?url={{ request.build_absolute_uri }}&text={{ post.title|urlencode }}" target="_blank" class="btn btn-outline-primary btn-sm me-2" title="Twitter'da Paylaş">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="btn btn-outline-primary btn-sm me-2" title="Facebook'ta Paylaş">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.reddit.com/submit?url={{ request.build_absolute_uri }}&title={{ post.title|urlencode }}" target="_blank" class="btn btn-outline-danger btn-sm me-2" title="Reddit'te Paylaş">
+                <i class="fab fa-reddit"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?text={{ post.title|urlencode }}%20{{ request.build_absolute_uri }}" target="_blank" class="btn btn-outline-success btn-sm me-2" title="WhatsApp'ta Paylaş">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ post.title|urlencode }}" target="_blank" class="btn btn-outline-primary btn-sm" title="Telegram'da Paylaş">
+                <i class="fab fa-telegram"></i>
+            </a>
+        </footer>
+    </div>
+</article>
+<section class="mb-5" id="comments">
+    <div class="card bg-light">
+        <div class="card-body">
+            <h3 class="mb-3">{% trans "Yorum Yap" %}</h3>
+            <form method="post">
+                {% csrf_token %}
+                {% if comment_form.errors %}
+                    <div class="alert alert-danger">
+                        {% for field, errors in comment_form.errors.items %}
+                            {{ errors|striptags }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {{ comment_form.as_p }}
+                <button type="submit" class="btn btn-primary">{% trans "Yorumu Gönder" %}</button>
+            </form>
+            <hr>
+            <h3 class="mb-3">{% blocktrans count comment_count=active_comments_count %}{{ comment_count }} Yorum{% plural %}{{ comment_count }} Yorum{% endblocktrans %}</h3>
+            {% for comment in comments %}
+                {% include 'blog/partials/comment_loop.html' with comment=comment %}
+            {% empty %}
+                <p>{% trans "Henüz hiç yorum yapılmamış. İlk yorumu siz yapın!" %}</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
