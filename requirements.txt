@@ -1,0 +1,6 @@
+Django
+django-jazzmin
+django-ckeditor
+Pillow
+django-crispy-forms
+crispy-bootstrap5
