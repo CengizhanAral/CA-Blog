@@ -1,0 +1,408 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-23 16:39+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\CA_Blog\settings.py:98
+msgid "Turkish"
+msgstr "Turkish"
+
+#: .\CA_Blog\settings.py:99
+msgid "English"
+msgstr "English"
+
+#: .\blog\admin.py:55 .\blog\models.py:59
+msgid "Taslak"
+msgstr "Draft"
+
+#: .\blog\admin.py:56 .\blog\models.py:60
+msgid "Onay Bekliyor"
+msgstr "Awaiting Approval"
+
+#: .\blog\forms.py:22
+msgid "İsminiz"
+msgstr "Name"
+
+#: .\blog\forms.py:23
+msgid "E-posta adresiniz"
+msgstr "yourmail@mail.com"
+
+#: .\blog\forms.py:24
+msgid "Yorumunuz..."
+msgstr "Your comment..."
+
+#: .\blog\forms.py:27 .\blog\models.py:106
+msgid "İsim"
+msgstr "Name"
+
+#: .\blog\forms.py:28 .\blog\models.py:107
+msgid "E-posta"
+msgstr "Email"
+
+#: .\blog\forms.py:29 .\blog\models.py:108 .\blog\models.py:114
+msgid "Yorum"
+msgstr "Comment"
+
+#: .\blog\forms.py:63
+#, fuzzy
+#| msgid "E-posta adresiniz"
+msgid "E-posta adresinizi girin..."
+msgstr "yourmail@mail.com"
+
+#: .\blog\models.py:14 .\blog\models.py:105
+msgid "Kullanıcı"
+msgstr "User"
+
+#: .\blog\models.py:15 .\templates\blog\author_posts.html:12
+msgid "Hakkında"
+msgstr "About"
+
+#: .\blog\models.py:25 .\blog\models.py:69
+msgid "Yazar"
+msgstr "Author"
+
+#: .\blog\models.py:26
+msgid "Yazarlar"
+msgstr "Authors"
+
+#: .\blog\models.py:30
+#, fuzzy
+#| msgid "Kategori Adı"
+msgid "Kategori Adı (Türkçe)"
+msgstr "Category Name (Turkish)"
+
+#: .\blog\models.py:33
+#, fuzzy
+#| msgid "Kategori Adı"
+msgid "Kategori Adı (İngilizce)"
+msgstr "Category Name (English)"
+
+#: .\blog\models.py:53 .\blog\models.py:70
+msgid "Kategori"
+msgstr "Category"
+
+#: .\blog\models.py:54 .\templates\blog\post_list.html:65
+msgid "Kategoriler"
+msgstr "Categories"
+
+#: .\blog\models.py:61
+msgid "Yayınlandı"
+msgstr "Published"
+
+#: .\blog\models.py:64
+msgid "Başlık (Türkçe)"
+msgstr "Title (Turkish)"
+
+#: .\blog\models.py:65
+msgid "İçerik (Türkçe)"
+msgstr "Content (Turkish)"
+
+#: .\blog\models.py:66
+msgid "Başlık (İngilizce)"
+msgstr "Title (English)"
+
+#: .\blog\models.py:67
+msgid "İçerik (İngilizce)"
+msgstr "Content (English)"
+
+#: .\blog\models.py:71 .\blog\models.py:109
+msgid "Oluşturulma Tarihi"
+msgstr "Created on"
+
+#: .\blog\models.py:72
+msgid "Güncellenme Tarihi"
+msgstr "Update Date"
+
+#: .\blog\models.py:73
+msgid "Durum"
+msgstr "Status"
+
+#: .\blog\models.py:74
+msgid "Görüntülenme Sayısı"
+msgstr "Number of Views"
+
+#: .\blog\models.py:94 .\blog\models.py:104
+msgid "Yazı"
+msgstr "Article"
+
+#: .\blog\models.py:95
+msgid "Yazılar"
+msgstr "Articles"
+
+#: .\blog\models.py:110
+msgid "Aktif"
+msgstr "Active"
+
+#: .\blog\models.py:111
+#, fuzzy
+#| msgid "Yorum"
+msgid "Ana Yorum"
+msgstr "Comment"
+
+#: .\blog\models.py:115
+msgid "Yorumlar"
+msgstr "Comments"
+
+#: .\blog\models.py:123
+#, fuzzy
+#| msgid "E-posta adresiniz"
+msgid "E-posta Adresi"
+msgstr "yourmail@mail.com"
+
+#: .\blog\models.py:124
+msgid "Abonelik Tarihi"
+msgstr "Subscription Date"
+
+#: .\blog\models.py:130
+msgid "Bülten Abonesi"
+msgstr "Newsletter Subscriber"
+
+#: .\blog\models.py:131
+msgid "Bülten Aboneleri"
+msgstr "Newsletter Subscribers"
+
+#: .\blog\views.py:171
+msgid "Bültenimize başarıyla abone oldunuz! Teşekkürler."
+msgstr "You have successfully subscribed to our newsletter! Thank you."
+
+#: .\templates\blog\author_posts.html:4
+#, python-format
+msgid "%(author_name)s Yazıları"
+msgstr "%(author_name)s Articles"
+
+#: .\templates\blog\author_posts.html:9 .\templates\blog\post_detail.html:13
+#: .\templates\blog\post_list.html:23 .\templates\blog\search_results.html:24
+#, fuzzy
+#| msgid "Yazar"
+msgid "Yazar:"
+msgstr "Author:"
+
+#: .\templates\blog\author_posts.html:18
+msgid "Yazarın Son Yazıları"
+msgstr "Author's Last Articles"
+
+#: .\templates\blog\author_posts.html:33 .\templates\blog\post_list.html:24
+#: .\templates\blog\search_results.html:25
+msgid "Tarih:"
+msgstr "Date:"
+
+#: .\templates\blog\author_posts.html:42 .\templates\blog\post_list.html:34
+#: .\templates\blog\search_results.html:34
+msgid "Devamını Oku"
+msgstr "Read More..."
+
+#: .\templates\blog\author_posts.html:46
+#, python-format
+msgid "%(author_name)s tarafından henüz bir yazı yayınlanmamış."
+msgstr "No articles have been published by %(author_name)s yet."
+
+#: .\templates\blog\author_posts.html:54 .\templates\blog\post_list.html:46
+#: .\templates\blog\post_list.html:48 .\templates\blog\search_results.html:45
+#: .\templates\blog\search_results.html:47
+msgid "Önceki"
+msgstr "Back"
+
+#: .\templates\blog\author_posts.html:57 .\templates\blog\post_list.html:51
+msgid "Sayfa"
+msgstr "Page"
+
+#: .\templates\blog\author_posts.html:60 .\templates\blog\post_list.html:54
+#: .\templates\blog\post_list.html:56 .\templates\blog\search_results.html:59
+#: .\templates\blog\search_results.html:61
+msgid "Sonraki"
+msgstr "Next"
+
+#: .\templates\blog\base.html:102
+msgid "Ara..."
+msgstr "Search..."
+
+#: .\templates\blog\base.html:107
+msgid "Temayı Değiştir"
+msgstr "Change the Theme"
+
+#: .\templates\blog\base.html:128 .\templates\blog\profile.html:4
+msgid "Profilim"
+msgstr "My Profile"
+
+#: .\templates\blog\base.html:130
+msgid "Yönetim Paneli"
+msgstr "Control Panel"
+
+#: .\templates\blog\base.html:137
+msgid "Çıkış Yap"
+msgstr "Logout"
+
+#: .\templates\blog\base.html:145 .\templates\blog\login.html:4
+#: .\templates\blog\login.html:8 .\templates\blog\login.html:13
+#: .\templates\blog\register.html:18
+msgid "Giriş Yap"
+msgstr "Log In"
+
+#: .\templates\blog\base.html:148 .\templates\blog\register.html:4
+#: .\templates\blog\register.html:13
+msgid "Kayıt Ol"
+msgstr "Sign Up"
+
+#: .\templates\blog\base.html:183
+msgid "E-posta bültenimize abone olun"
+msgstr "Subscribe to our email newsletter"
+
+#: .\templates\blog\base.html:193
+msgid "Abone Ol"
+msgstr "Subscribe"
+
+#: .\templates\blog\base.html:202
+msgid "Tüm hakları saklıdır."
+msgstr "All rights reserved."
+
+#: .\templates\blog\login.html:18
+msgid "Hesabın yok mu?"
+msgstr "‘Don't have an account?"
+
+#: .\templates\blog\login.html:18
+msgid "Hemen Kayıt Ol"
+msgstr "Sign up NOW"
+
+#: .\templates\blog\logout.html:3
+msgid "Çıkış Yapıldı"
+msgstr "Logged out"
+
+#: .\templates\blog\logout.html:5
+msgid "Başarıyla çıkış yaptınız."
+msgstr "You have successfully logged out."
+
+#: .\templates\blog\logout.html:8
+msgid "Tekrar Giriş Yap"
+msgstr "Log in again"
+
+#: .\templates\blog\partials\comment_loop.html:9
+msgid "Ziyaretçi"
+msgstr "Guest"
+
+#: .\templates\blog\partials\comment_loop.html:15
+msgid "Yanıtla"
+msgstr "Reply"
+
+#: .\templates\blog\partials\comment_loop.html:31
+msgid "Yanıtı Gönder"
+msgstr "Send Reply"
+
+#: .\templates\blog\post_detail.html:12
+msgid "Yayınlanma tarihi:"
+msgstr "Published date:"
+
+#: .\templates\blog\post_detail.html:15
+#, python-format
+msgid "%(minutes)s dk okuma"
+msgstr "%(minutes)s min"
+
+#: .\templates\blog\post_detail.html:27
+msgid "Paylaş:"
+msgstr "Share:"
+
+#: .\templates\blog\post_detail.html:50
+#, fuzzy
+#| msgid "Yorum"
+msgid "Yorum Yap"
+msgstr "Comment"
+
+#: .\templates\blog\post_detail.html:61
+msgid "Yorumu Gönder"
+msgstr "Send to Comment"
+
+#: .\templates\blog\post_detail.html:64
+#, python-format
+msgid "%(comment_count)s Yorum"
+msgid_plural "%(comment_count)s Yorum"
+msgstr[0] "%(comment_count)s Comment"
+msgstr[1] "%(comment_count)s Comments"
+
+#: .\templates\blog\post_detail.html:68
+msgid "Henüz hiç yorum yapılmamış. İlk yorumu siz yapın!"
+msgstr "No comments have been made yet. Be the first to comment!"
+
+#: .\templates\blog\post_list.html:4
+msgid "CA-Blog Ana Sayfa"
+msgstr "CA-Blog Main Page"
+
+#: .\templates\blog\post_list.html:8
+#, fuzzy
+#| msgid "Yazılar"
+msgid "Son Yazılar"
+msgstr "Articles"
+
+#: .\templates\blog\post_list.html:25
+#, python-format
+msgid "%(minutes)s dk"
+msgstr "%(minutes)s min"
+
+#: .\templates\blog\post_list.html:38
+msgid "Henüz yayınlanmış bir yazı bulunmamaktadır."
+msgstr "No articles have been published yet."
+
+#: .\templates\blog\profile.html:13
+#, fuzzy
+#| msgid "Kullanıcı"
+msgid "Kullanıcı Bilgileri"
+msgstr "User"
+
+#: .\templates\blog\profile.html:17
+msgid "Profil Bilgileri"
+msgstr "Profile"
+
+#: .\templates\blog\profile.html:21
+#, fuzzy
+#| msgid "Güncellenme Tarihi"
+msgid "Güncelle"
+msgstr "Update Date"
+
+#: .\templates\blog\register.html:8
+msgid "Topluluğumuza Katıl"
+msgstr "Join our Community"
+
+#: .\templates\blog\register.html:18
+msgid "Zaten bir hesabın var mı?"
+msgstr "Do you already have an account?"
+
+#: .\templates\blog\search_results.html:4
+msgid "Arama Sonuçları"
+msgstr "Arama Sonuçları"
+
+#: .\templates\blog\search_results.html:8
+#, python-format
+msgid "\"%(query)s\" için arama sonuçları"
+msgstr "Results for \"%(query)s\""
+
+#: .\templates\blog\search_results.html:8
+msgid "Arama"
+msgstr "Search"
+
+#: .\templates\blog\search_results.html:38
+#, python-format
+msgid "\"%(query)s\" için sonuç bulunamadı."
+msgstr "No result found for \"%(query)s\"."
+
+#: .\templates\blog\search_results.html:38
+msgid "Lütfen aramak için bir terim girin."
+msgstr "Please enter a term to search for."
+
+#~ msgid "Başlık"
+#~ msgstr "Title"
+
+#~ msgid "İçerik"
+#~ msgstr "Content"
